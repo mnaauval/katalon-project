@@ -94,13 +94,13 @@ class LoginSteps {
 		WebUI.verifyElementPresent(findTestObject('Object Repository/General/button (class)', ['class': 'error-button']), GlobalVariable.timeoutLoading)
 		String actualError = WebUI.getText(findTestObject('Object Repository/General/h3 (data-test)', ['data-test': 'error']))
 		assert actualError.contains(errorMessage) : KeywordUtil.markFailed("${actualError} doesn't match ${errorMessage}")
-		
+
 		// Generate a timestamp for unique file names
 		String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date())
 
 		// Define the custom file name
-		String screenshotPath = "${RunConfiguration.getReportFolder()}/${timestamp}_${errorMessage}.png"
-		
+		String screenshotPath = "${RunConfiguration.getReportFolder()}/Scenario User login with invalid credentials/${timestamp}_${errorMessage}.png"
+
 		WebUI.takeElementScreenshot(screenshotPath, findTestObject('Object Repository/General/div (class)', ['class': 'login_wrapper-inner']))
 		WebUI.click(findTestObject('Object Repository/General/button (class)', ['class': 'error-button']))
 		WebUI.verifyElementNotPresent(findTestObject('Object Repository/General/button (class)', ['class': 'error-button']), GlobalVariable.timeoutLoading)

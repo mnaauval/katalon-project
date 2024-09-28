@@ -1,12 +1,12 @@
 Feature: Login
 
-  #Scenario: User login with valid credentials
-  #Given User navigate to Login Page
-  #When User input username
-  #And User input password
-  #And User click login button
-  #Then User validate success login
-  
+  Scenario: User login with valid credentials
+    Given User navigate to Login Page
+    When User input username
+    And User input password
+    And User click login button
+    Then User validate success login
+
   Scenario Outline: User login with invalid credentials
     Given User navigate to Login Page
     When User input username <username>
