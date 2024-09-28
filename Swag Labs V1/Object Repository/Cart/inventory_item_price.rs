@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>inventory_item_price</name>
+   <tag></tag>
+   <elementGuidId>585a8241-8325-42f7-aaea-c165b6d2b1ac</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//div[@class='inventory_item_price']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//div[@class='inventory_item_price']</value>
+      <webElementGuid>ed2ea0ee-9855-4294-8bfb-58083805635d</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

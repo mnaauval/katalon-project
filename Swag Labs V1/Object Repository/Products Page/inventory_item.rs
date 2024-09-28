@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>inventory_item</name>
+   <tag></tag>
+   <elementGuidId>d8e59b6d-08d1-4d6a-b773-8b5dd2664611</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//div[@class=&quot;inventory_item&quot;]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//div[@class=&quot;inventory_item&quot;]</value>
+      <webElementGuid>b2257ff9-2c9e-4cd9-a286-b3c93c97c5f2</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>
