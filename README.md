@@ -2,6 +2,7 @@
 
 ## 🚀 Project Overview
 
-This project is about my past and recent Katalon Project. I learn from my mistake and keep improving my skill
+This is where I document my learning experiences and insights about Katalon Studio 🧑‍💻. 
+Designed to inspire others and foster a community of continuous growth and knowledge-sharing 🙌.
 
 ---
