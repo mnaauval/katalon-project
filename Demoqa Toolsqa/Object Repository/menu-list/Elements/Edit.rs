@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>Edit</name>
+   <tag></tag>
+   <elementGuidId>511f87d3-3aed-4523-b696-0479d6e24da1</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//div[div[text()='${first_name}']]/div/div/span[@title='Edit']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//div[div[text()='${first_name}']]/div/div/span[@title='Edit']</value>
+      <webElementGuid>7c86f4ef-e39a-43b2-9b98-e5406ae630e1</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>
