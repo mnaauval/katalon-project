@@ -2,8 +2,7 @@
 
 bin
 
-Reports
-
+*Reports*
 Libs
 
 output
@@ -18,3 +17,5 @@ build
 .cache
 
 .settings
+
+*.prj

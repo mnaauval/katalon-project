@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Login</name>
+   <name>Login with Run Cucumber Runner</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>97b30583-44d6-47c6-bce6-a3517d22a3fd</testCaseGuid>
+   <testCaseGuid>69f8e0ea-c955-4242-b21b-9b525cc799e8</testCaseGuid>
 </TestCaseEntity>

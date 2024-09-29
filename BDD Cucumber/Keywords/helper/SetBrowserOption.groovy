@@ -6,6 +6,7 @@ import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
 
+import org.openqa.selenium.JavascriptExecutor
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.chrome.ChromeOptions
@@ -55,10 +56,12 @@ public class SetBrowserOption {
 		System.setProperty("webdriver.chrome.driver", DriverFactory.getChromeDriverPath())
 		KeywordUtil.markPassed("⚠ Set Preferences and Opening the browser ⚠️")
 		WebDriver driver = new ChromeDriver(options)
+		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver
 		RunConfiguration.storeDriver(driver)
 		KeywordUtil.markPassed("✅ Success Set Preferences ✅")
 		DriverFactory.changeWebDriver(driver)
 		driver.get(url)
+		jsExecutor.executeScript("window.postMessage({ type: 'devtools-console', tool: 'network' }, '*');")
 		KeywordUtil.markPassed("✅  Browser Opened ✅")
 	}
 
@@ -72,6 +75,10 @@ public class SetBrowserOption {
 	 */
 	static void setFirefoxOption(boolean isHeadless, String downloadPath, String url) {
 		FirefoxOptions options = new FirefoxOptions()
+		options.addArguments("--devtools")
+		options.addPreference("devtools.toolbox.selectedTool", "netmonitor")
+		options.addPreference("devtools.chrome.enabled", true)
+		options.addPreference("devtools.debugger.remote-enabled", true)
 		options.addPreference("browser.download.dir", downloadPath)
 		options.addPreference("browser.download.useDownloadDir", true)
 		options.addPreference("browser.helperApps.neverAsk.saveToDisk", "application/*")

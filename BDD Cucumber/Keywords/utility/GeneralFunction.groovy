@@ -33,7 +33,7 @@ public class GeneralFunction {
 	 * @return
 	 */
 	@Keyword
-	static String getDirectory(boolean isProjectDir = true, String directoryPath = "") {
+	static String getDirectory(String directoryPath = "", boolean isProjectDir = true) {
 		if (isProjectDir) directoryPath = RunConfiguration.getProjectDir() + "/" + directoryPath
 		boolean isUsingBackslash = true
 

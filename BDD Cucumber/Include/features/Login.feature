@@ -17,7 +17,9 @@ Feature: Login
     Examples: 
       | username        | password                 | error                                                       |
       | standard_user   | o+tS4OuGt32nW2fw4d97xA== | Username and password do not match any user in this service |
+      |                 |                          | Password is required                                        |
       | locked_out_user | qcu24s4901FyWDTwXGr6XA== | Sorry, this user has been locked out.                       |
       | premium_user    | qcu24s4901FyWDTwXGr6XA== | Username and password do not match any user in this service |
       |                 | o+tS4OuGt32nW2fw4d97xA== | Username is required                                        |
       | standard_user   |                          | Password is required                                        |
+      |                 |                          | Password is required                                        |

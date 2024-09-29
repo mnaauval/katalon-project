@@ -15,7 +15,14 @@
       <guid>b6375ba9-b22d-4870-8f84-4baee89de878</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Auth/Login</testCaseId>
+      <testCaseId>Test Cases/Auth/Login with Run Feature File</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>c9dbdc5b-ddfd-42df-a82f-93e5ab5b6dfc</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Auth/Login with Run Cucumber Runner</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>
