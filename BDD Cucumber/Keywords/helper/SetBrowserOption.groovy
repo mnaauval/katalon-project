@@ -29,7 +29,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 
 import internal.GlobalVariable
-import utilitize.GeneralFunction
+import utility.GeneralFunction
 
 public class SetBrowserOption {
 	/**

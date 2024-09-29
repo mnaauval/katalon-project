@@ -1,4 +1,4 @@
-package utilitize
+package utility
 
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
@@ -24,17 +24,17 @@ import internal.GlobalVariable
 
 public class GeneralFunction {
 	/**
-	 * This Keyword will get Full address or path of your root level katalon project
+	 * This Keyword will get Full address or path
 	 * </br>
 	 * You can give a parameter the return using backslash or no. Also you can set the target path
 	 *
 	 * @param isUsingBackslash
-	 * @param targetPath
+	 * @param directoryPath
 	 * @return
 	 */
 	@Keyword
-	public static String getDirectory(String targetPath='') {
-		String directoryPath = RunConfiguration.getProjectDir() + "/" + targetPath
+	static String getDirectory(boolean isProjectDir = true, String directoryPath = "") {
+		if (isProjectDir) directoryPath = RunConfiguration.getProjectDir() + "/" + directoryPath
 		boolean isUsingBackslash = true
 
 		if (directoryPath[0]=='/') {
@@ -44,7 +44,31 @@ public class GeneralFunction {
 		if (isUsingBackslash) {
 			directoryPath = directoryPath.replaceAll("/", "\\\\").trim()
 		}
-		KeywordUtil.markPassed("✅ path : '${directoryPath}' ✅")
+		
+		KeywordUtil.markPassed("✅path : '${directoryPath}'✅")
+		
 		return directoryPath
+	}
+
+	static String[] getListFileName(String directoryPath = "") {
+		ArrayList<String> fileNameList = new ArrayList()
+		File dir = new File(directoryPath)
+
+		if (dir.exists() && dir.isDirectory()) {
+			File[] filesList = dir.listFiles()
+
+			if (filesList.length == 0) {
+				KeywordUtil.markWarning("⚠The directory is empty⚠️")
+			} else {
+				println "Listing files from: " + directoryPath
+				filesList.each { file ->
+					fileNameList.add(file.getName())
+				}
+			}
+
+			return fileNameList
+		} else {
+			KeywordUtil.markFailed("The specified path is not a directory or does not exist.")
+		}
 	}
 }
